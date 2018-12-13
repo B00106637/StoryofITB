@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Story of ITB</title>
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+</head>
+
+<body>
+<!--NAV BAR-->
+<nav>
+  <ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="courses.html">Courses</a></li>
+  <li><a href="students.html">Current Students</a></li>
+  <li><a href="history.html">History</a></li>
+  <li><a href="glossary.html">Glossary</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+	
+<h1 id="title">The Story of ITB</h1>
+	<p>Welcome to the Story of ITB website, where you can learn about the history of our wonderful Institution!</p>
+	
+	<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+	<img src="images/campus1.jpg" style="width:100%" alt="campusatnight">
+    <div class="text">History</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="images/grad1.jpg" style="width:100%" alt="graduates">
+    <div class="text">Students</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+	<img src="images/campus3.jpg" style="width:100%" alt="campusatday">
+    <div class="text">Campus</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+	
+	<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>History</h2>
+    <p>ITB opened it's doors in 1999 and since then has grown as a staple in teaching in Dublin, and is an important part of the drive for the Technological University of Dublin, which it will be part of in January 2019.</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Horticulture</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#ccc;">
+    <h2>Column 3</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+<footer>Institute of Technology Blanchardstown, Blanchardstown Road North, Dublin 15,D15 YV78<hr>
+
+Tel: +353 (1) 8851000 | Fax: +353 (1) 8851001 | Email: info@itb.ie<hr>
+
+© Christopher Carney B00106637@student.itb.ie Institute of Technology Blanchardstown</footer>
+</body>
+</html>
