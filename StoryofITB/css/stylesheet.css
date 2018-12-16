@@ -2,6 +2,14 @@
 /* CSS Document */
 
 
+h1 {
+	padding-left: 40%;
+}
+
+p1 {
+	padding-left: 30%;
+}
+
 /*NAV BAR STYLING*/
 
 nav {
@@ -141,6 +149,9 @@ li a:hover:not(.active) {
 }
 
 
+
+
+
 /*THREE COLUMNS*/
 
 * {
@@ -152,7 +163,7 @@ li a:hover:not(.active) {
   float: left;
   width: 33.33%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 500px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -160,4 +171,77 @@ li a:hover:not(.active) {
   content: "";
   display: table;
   clear: both;
+}
+
+
+
+
+
+
+
+footer {
+	position: absolute;
+	background-color: #333333;
+	width: 100%;
+}
+
+p3 {
+	color: aliceblue;
+}
+
+
+
+
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.contact {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
